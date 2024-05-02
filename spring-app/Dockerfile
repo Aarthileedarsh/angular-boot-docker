@@ -9,12 +9,7 @@ ENV SPRING_APPLICATION_JSON=\
 
 EXPOSE 8080
 
-COPY target/spring-app*.jar /app/app.jar
 
-#just start the app
-#CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/app.jar"]
-
-#honor container limits
 CMD ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-XX:MaxRAMFraction=1","-Djava.security.egd=file:/dev/./urandom","-jar","/app/app.jar"]
 
 #remote debugging
