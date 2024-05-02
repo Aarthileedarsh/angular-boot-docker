@@ -9,6 +9,9 @@ ENV SPRING_APPLICATION_JSON=\
 
 EXPOSE 8080
 
+COPY ./dist /app/dist
+
+
 
 CMD ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-XX:MaxRAMFraction=1","-Djava.security.egd=file:/dev/./urandom","-jar","/app/app.jar"]
 
