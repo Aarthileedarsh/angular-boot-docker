@@ -9,7 +9,7 @@ ENV SPRING_APPLICATION_JSON=\
 
 EXPOSE 8080
 
-COPY ./dist /app/dist
+
 
 
 
